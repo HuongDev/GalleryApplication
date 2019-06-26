@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">GalleryApplication</string>
+    <string name="text_add">Add Item</string>
+    <string name="text_edit">Edit Item</string>
+    <string name="text_delete">Delete Item</string>
+    <string name="text_close">Close</string>
+    <string name="choose_an_option">Choose an option</string>
+</resources>
