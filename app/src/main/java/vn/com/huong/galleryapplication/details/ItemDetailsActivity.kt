@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat.startActivity
 import com.bumptech.glide.Glide
 import com.github.chrisbanes.photoview.PhotoView
-import vn.com.huong.galleryapplication.Items
+import vn.com.huong.galleryapplication.model.Items
 import vn.com.huong.galleryapplication.R
 import vn.com.huong.galleryapplication.custom.PhotoViewIndicator
 

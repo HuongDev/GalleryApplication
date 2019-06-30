@@ -1,4 +1,4 @@
-package vn.com.huong.galleryapplication
+package vn.com.huong.galleryapplication.main
 
 import android.os.Bundle
 import androidx.fragment.app.DialogFragment
@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
+import vn.com.huong.galleryapplication.R
 
 /**
  * Created by HuongPN on 01/21/2019.

@@ -1,4 +1,4 @@
-package vn.com.huong.galleryapplication
+package vn.com.huong.galleryapplication.model
 
 import io.objectbox.annotation.Entity
 import io.objectbox.annotation.Id

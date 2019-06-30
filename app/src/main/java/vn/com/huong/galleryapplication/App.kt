@@ -1,6 +1,7 @@
 package vn.com.huong.galleryapplication
 
 import android.app.Application
+import vn.com.huong.galleryapplication.Db.ObjectBox
 
 /**
  * Created by HuongPN on 01/18/2019.

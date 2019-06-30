@@ -1,4 +1,4 @@
-package vn.com.huong.galleryapplication
+package vn.com.huong.galleryapplication.main
 
 import android.app.AlertDialog
 import android.graphics.Color
@@ -12,6 +12,12 @@ import androidx.appcompat.app.AppCompatActivity
 import io.objectbox.Box
 import io.objectbox.query.Query
 import kotlinx.android.synthetic.main.activity_main.*
+import vn.com.huong.galleryapplication.App
+import vn.com.huong.galleryapplication.Db.ObjectBox
+import vn.com.huong.galleryapplication.Items_
+import vn.com.huong.galleryapplication.R
+import vn.com.huong.galleryapplication.custom.GridItemDecoration
+import vn.com.huong.galleryapplication.model.Items
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -48,17 +54,23 @@ class MainActivity : AppCompatActivity() {
     private fun addItem() {
 
         for (i in 0..20) {
-            val item = Items(i.toLong(),
-                "Air Jordan $i Not For Resell", "http://d2lllwtzebgpl1.cloudfront.net/a0317846f035eb6c820e7d1fe6228cb1_listingImg_9nXeNJVWUj.jpg", 230, "Not For Resell", Date());
+            val item = Items(
+                i.toLong(),
+                "Air Jordan $i Not For Resell",
+                "http://d2lllwtzebgpl1.cloudfront.net/a0317846f035eb6c820e7d1fe6228cb1_listingImg_9nXeNJVWUj.jpg",
+                230,
+                "Not For Resell",
+                Date()
+            );
             itemsBox.put(item);
-            Log.d(App.TAG, "Inserted new item, Name: ${item.name}");
+            Log.d(App.TAG, "Inserted new item, Name: ${item.name}")
         }
 
     }
 
     fun onMenuButtonClick(v: View) {
         val builder = AlertDialog.Builder(this)
-        val inflater = this.layoutInflater;
+        val inflater = this.layoutInflater
         val view = inflater.inflate(R.layout.dialog_menu, null)
         builder.setView(view)
 

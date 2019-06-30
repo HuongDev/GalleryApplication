@@ -1,4 +1,4 @@
-package vn.com.huong.galleryapplication
+package vn.com.huong.galleryapplication.custom
 
 import android.graphics.Rect
 import androidx.recyclerview.widget.GridLayoutManager

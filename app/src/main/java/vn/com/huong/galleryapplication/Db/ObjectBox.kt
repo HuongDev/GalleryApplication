@@ -1,7 +1,8 @@
-package vn.com.huong.galleryapplication
+package vn.com.huong.galleryapplication.Db
 
 import android.content.Context
 import io.objectbox.BoxStore
+import vn.com.huong.galleryapplication.MyObjectBox
 
 /**
  * Created by HuongPN on 01/18/2019.
