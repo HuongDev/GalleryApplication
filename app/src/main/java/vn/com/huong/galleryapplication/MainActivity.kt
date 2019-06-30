@@ -4,12 +4,11 @@ import android.app.AlertDialog
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.GridLayoutManager
 import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import io.objectbox.Box
 import io.objectbox.query.Query
 import kotlinx.android.synthetic.main.activity_main.*
@@ -35,7 +34,7 @@ class MainActivity : AppCompatActivity() {
             build()
         }
 
-//        addItem()
+        addItem()
 
         updateItems()
     }
@@ -47,9 +46,14 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun addItem() {
-        val item = Items(0, "Air Jordan 1 Not For Resell", "http://d2lllwtzebgpl1.cloudfront.net/a0317846f035eb6c820e7d1fe6228cb1_listingImg_9nXeNJVWUj.jpg", 230, "Not For Resell", Date());
-        itemsBox.put(item);
-        Log.d(App.TAG, "Inserted new item, Name: ${item.name}");
+
+        for (i in 0..20) {
+            val item = Items(i.toLong(),
+                "Air Jordan $i Not For Resell", "http://d2lllwtzebgpl1.cloudfront.net/a0317846f035eb6c820e7d1fe6228cb1_listingImg_9nXeNJVWUj.jpg", 230, "Not For Resell", Date());
+            itemsBox.put(item);
+            Log.d(App.TAG, "Inserted new item, Name: ${item.name}");
+        }
+
     }
 
     fun onMenuButtonClick(v: View) {
@@ -80,7 +84,7 @@ class MainActivity : AppCompatActivity() {
     private fun setUpViews() {
         // Setup Recycler View
         rcvItems.setHasFixedSize(true)
-        rcvItems.layoutManager = GridLayoutManager(this, 2)
+        rcvItems.layoutManager = androidx.recyclerview.widget.GridLayoutManager(this, 2)
         rcvItems.addItemDecoration(GridItemDecoration(50))
         itemsAdapter = ItemsAdapter(this@MainActivity)
         rcvItems.adapter = itemsAdapter

@@ -9,7 +9,7 @@ import java.util.*
  */
 @Entity
 data class Items(
-    @Id var id: Long = 0,
+    @Id(assignable = true) var id: Long = 0,
     var name: String? = null,
     var image: String? = null,
     var price: Int = 0,

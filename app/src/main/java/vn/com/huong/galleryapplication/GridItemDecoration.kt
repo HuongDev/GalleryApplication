@@ -1,19 +1,19 @@
 package vn.com.huong.galleryapplication
 
 import android.graphics.Rect
-import android.support.v7.widget.GridLayoutManager
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import android.view.View
 
 /**
  * Created by HuongPN on 01/21/2019.
  */
-class GridItemDecoration(private var offset: Int): RecyclerView.ItemDecoration() {
+class GridItemDecoration(private var offset: Int): androidx.recyclerview.widget.RecyclerView.ItemDecoration() {
 
-    override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State) {
+    override fun getItemOffsets(outRect: Rect, view: View, parent: androidx.recyclerview.widget.RecyclerView, state: androidx.recyclerview.widget.RecyclerView.State) {
         super.getItemOffsets(outRect, view, parent, state)
 
-        val layoutPrams = view.layoutParams as GridLayoutManager.LayoutParams
+        val layoutPrams = view.layoutParams as androidx.recyclerview.widget.GridLayoutManager.LayoutParams
 
         if (layoutPrams.spanIndex.div(2) == 0) {
 
